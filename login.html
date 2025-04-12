@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Kunden-Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script defer src="codes.js"></script>
 </head>
 <body>
   <div class="login-wrapper">
     <h2>Kundenbereich Login</h2>
-    <input type="text" id="codeInput" placeholder="Zugangscode eingeben">
+    <input type="text" id="codeInput" placeholder="Zugangscode eingeben" />
     <button onclick="checkCode()">Einloggen</button>
     <p id="loginMessage"></p>
   </div>
   <script>
-     function checkCode() {
-    const codeInput = document.getElementById("codeInput").value.trim();
-    if (isCodeValid(codeInput)) {
-      window.location.href = "kundenbereich.html";
-    } else {
-      document.getElementById("loginMessage").innerText = "Ungültiger oder abgelaufener Zugangscode.";
+    function checkCode() {
+      const codeInput = document.getElementById("codeInput").value.trim();
+      if (window.isCodeValid && isCodeValid(codeInput)) {
+        window.location.href = "kundenbereich.html";
+      } else {
+        document.getElementById("loginMessage").innerText =
+          "Ungültiger oder abgelaufener Zugangscode.";
+      }
     }
-  }
   </script>
 </body>
 </html>
