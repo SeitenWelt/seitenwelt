@@ -1,22 +1,24 @@
-body.login-page {
+/* Allgemeines Styling */
 
-  background-image: url('faksimile_bg.png');
-
-  background-size: cover;
-
-  background-repeat: no-repeat;
-
-  background-position: center;
-
-  font-family: "Georgia", serif;
-
-  color: #222;
-
-  text-align: center;
+body {
 
   margin: 0;
 
-  padding: 0;
+  font-family: 'Georgia', serif;
+
+}
+
+
+
+/* LOGIN Seite */
+
+.login-page {
+
+  background-color: #f8f8f8;
+
+  text-align: center;
+
+  padding-top: 50px;
 
 }
 
@@ -24,17 +26,17 @@ body.login-page {
 
 .login-wrapper {
 
-  background: rgba(255, 255, 255, 0.85);
-
-  max-width: 400px;
-
-  margin: 100px auto;
+  background: white;
 
   padding: 30px;
 
-  border-radius: 10px;
+  max-width: 400px;
 
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  margin: auto;
+
+  border-radius: 8px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
 }
 
@@ -50,46 +52,9 @@ body.login-page {
 
 
 
-input[type="text"] {
+/* KUNDENBEREICH Seite */
 
-  width: 80%;
-
-  padding: 10px;
-
-  margin: 10px 0;
-
-  font-size: 16px;
-
-}
-
-
-
-button {
-
-  padding: 10px 20px;
-
-  background-color: #003366;
-
-  color: white;
-
-  border: none;
-
-  font-size: 16px;
-
-  cursor: pointer;
-
-  border-radius: 5px;
-
-}
-
-
-
-button:hover {
-
-  background-color: #002244;
-
-}
-body.kundenbereich-page {
+.kundenbereich-page {
 
   background-image: url('faksimile_bg.png');
 
@@ -97,62 +62,18 @@ body.kundenbereich-page {
 
   background-position: center;
 
-  background-repeat: no-repeat;
-
-  font-family: "Georgia", serif;
-
-  color: #222;
-
-  margin: 0;
-
-  padding: 0;
-
-  text-align: center;
-
-}
-
-
-
-.kundenbereich-wrapper {
-
-  background: rgba(255, 255, 255, 0.9);
-
-  margin: 100px auto;
-
-  max-width: 700px;
-
-  padding: 40px;
-
-  border-radius: 10px;
-
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-
-}
-
-
-
-.zurueck-link {
-
-  display: inline-block;
-
-  margin-top: 30px;
-
-  text-decoration: none;
-
-  background-color: #003366;
+  min-height: 100vh;
 
   color: white;
 
-  padding: 10px 20px;
-
-  border-radius: 5px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
 
 }
 
 
 
-.zurueck-link:hover {
+.kundenbereich-page .content {
 
-  background-color: #002244;
+  padding: 40px;
 
 }
