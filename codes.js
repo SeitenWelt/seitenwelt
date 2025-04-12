@@ -1,15 +1,14 @@
-
-const codes = {
-  "SEITEN001": true,
-  "SAMMLER2024": true,
-  "FAXBIBEL": true
-};
-function checkCode() {
-  const input = document.getElementById("code").value.trim();
-  const error = document.getElementById("error");
-  if (codes[input]) {
-    window.location.href = "kundenbereich.html";
-  } else {
-    error.textContent = "Ungültiger Zugangscode.";
-  }
+// Zugangscodes mit Erstellungsdatum
+const accessCodes = [
+  { code: "KUNDE123", createdAt: "2025-04-12" },
+  { code: "KUNDE456", createdAt: "2025-04-01" }
+];
+// Funktion prüft, ob Code gültig (240 Tage ab Erstellungsdatum)
+function isCodeValid(inputCode) {
+  const code = accessCodes.find(c => c.code === inputCode);
+  if (!code) return false;
+  const created = new Date(code.createdAt);
+  const today = new Date();
+  const diffDays = Math.floor((today - created) / (1000 * 60 * 60 * 24));
+  return diffDays <= 240;
 }
