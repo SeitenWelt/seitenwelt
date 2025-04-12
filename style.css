@@ -89,3 +89,70 @@ button:hover {
   background-color: #002244;
 
 }
+body.kundenbereich-page {
+
+  background-image: url('faksimile_bg.png');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  font-family: "Georgia", serif;
+
+  color: #222;
+
+  margin: 0;
+
+  padding: 0;
+
+  text-align: center;
+
+}
+
+
+
+.kundenbereich-wrapper {
+
+  background: rgba(255, 255, 255, 0.9);
+
+  margin: 100px auto;
+
+  max-width: 700px;
+
+  padding: 40px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+.zurueck-link {
+
+  display: inline-block;
+
+  margin-top: 30px;
+
+  text-decoration: none;
+
+  background-color: #003366;
+
+  color: white;
+
+  padding: 10px 20px;
+
+  border-radius: 5px;
+
+}
+
+
+
+.zurueck-link:hover {
+
+  background-color: #002244;
+
+}
