@@ -14,21 +14,14 @@
     <p id="loginMessage"></p>
   </div>
   <script>
-    function checkCode() {
-      const code = document.getElementById("codeInput").value.trim();
-      const user = codes.find(c => c.code === code);
-      if (user) {
-        const now = new Date();
-        const expiry = new Date(user.expires);
-        if (now < expiry) {
-          window.location.href = "kundenbereich.html";
-        } else {
-          document.getElementById("loginMessage").innerText = "Zugangscode ist abgelaufen.";
-        }
-      } else {
-        document.getElementById("loginMessage").innerText = "Ungültiger Zugangscode.";
-      }
+     function checkCode() {
+    const codeInput = document.getElementById("codeInput").value.trim();
+    if (isCodeValid(codeInput)) {
+      window.location.href = "kundenbereich.html";
+    } else {
+      document.getElementById("loginMessage").innerText = "Ungültiger oder abgelaufener Zugangscode.";
     }
+  }
   </script>
 </body>
 </html>
