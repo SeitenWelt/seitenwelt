@@ -1,61 +1,29 @@
 <!DOCTYPE html>
-
 <html lang="de">
-
 <head>
-
     <meta charset="UTF-8">
-
     <title>Seitenwelt – Vermittlung exklusiver Werke</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
-
 <body>
-
     <div class="login-container">
-
         <img src="seitenwelt_logo.jpeg" alt="Seitenwelt Logo" class="logo">
-
         <h1>Willkommen bei Seitenwelt</h1>
-
         <p>Bitte Zugangscode eingeben:</p>
-
         <input type="password" id="zugangscode" placeholder="Zugangscode">
-
         <button onclick="checkCode()">Login</button>
-
         <p id="error-message" class="error"></p>
-
     </div>
-
-
-
     <script>
-
         function checkCode() {
-
             const code = document.getElementById("zugangscode").value;
-
             const errorMessage = document.getElementById("error-message");
-
-
-
             if (code === "seitenwelt") {
-
                 window.location.href = "kundenbereich.html";
-
             } else {
-
                 errorMessage.textContent = "Ungültiger Zugangscode.";
-
             }
-
         }
-
     </script>
-
 </body>
-
 </html>
