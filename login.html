@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Kunden-Login</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
   <script defer src="codes.js"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
   <script>
     function checkCode() {
       const codeInput = document.getElementById("codeInput").value.trim();
-      if (window.isCodeValid && isCodeValid(codeInput)) {
+      if (window.isCodeValid && window.isCodeValid(codeInput)) {
         window.location.href = "kundenbereich.html";
       } else {
         document.getElementById("loginMessage").innerText =
