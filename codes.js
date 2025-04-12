@@ -1,6 +1,6 @@
 // Zugangscodes mit Erstellungsdatum
 const accessCodes = [
-  { code: "BAUR767CH", createdAt: "2025-04-12" },
+  { code: "KUNDE123", createdAt: "2025-04-12" },
   { code: "KUNDE456", createdAt: "2025-04-01" }
 ];
 // Funktion prüft, ob Code gültig (240 Tage ab Erstellungsdatum)
