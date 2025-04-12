@@ -6,33 +6,33 @@
 
   <meta charset="UTF-8">
 
-  <title>Willkommen bei Seitenwelt</title>
+  <title>Seitenwelt Login</title>
 
   <link rel="stylesheet" href="style.css">
 
-  <script defer src="codes.js"></script>
-
 </head>
 
-<body class="login-page">
+<body style="background-image: url('faksimile_bg.png'); background-size: cover;">
 
-  <div class="login-wrapper">
+  <div class="login-box">
 
     <img src="seitenwelt_logo.jpg" alt="Seitenwelt Logo" class="logo">
 
-    <h2>Willkommen bei Seitenwelt</h2>
+    <h1>Willkommen bei Seitenwelt</h1>
 
     <p>Bitte Zugangscode eingeben:</p>
 
-    <input type="text" id="codeInput" placeholder="Zugangscode">
+    <input type="password" id="codeInput" placeholder="Zugangscode">
 
     <button onclick="checkCode()">Login</button>
 
-    <p id="loginMessage"></p>
+    <p id="loginMessage" class="error-message"></p>
 
   </div>
 
 
+
+  <script src="codes.js"></script>
 
   <script>
 
@@ -40,15 +40,13 @@
 
       const codeInput = document.getElementById("codeInput").value.trim();
 
-      if (window.isCodeValid && isCodeValid(codeInput)) {
+      if (window.isCodeValid(codeInput)) {
 
         window.location.href = "kundenbereich.html";
 
       } else {
 
-        document.getElementById("loginMessage").innerText =
-
-          "Ungültiger oder abgelaufener Zugangscode.";
+        document.getElementById("loginMessage").innerText = "Ungültiger oder abgelaufener Zugangscode.";
 
       }
 
