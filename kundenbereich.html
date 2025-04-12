@@ -6,21 +6,166 @@
 
   <meta charset="UTF-8">
 
-  <title>Kundenbereich</title>
+  <title>Kundenbereich – Seitenwelt</title>
 
   <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body class="kundenbereich-page">
+<body style="background-image: url('faksimile_bg.png'); background-size: cover;">
 
-  <div class="content">
+  <div class="content-box">
 
-    <h1>Willkommen im Kundenbereich</h1>
+    <img src="seitenwelt_logo.jpg" alt="Seitenwelt Logo" class="logo">
 
-    <p>Hier befinden sich Ihre exklusiven Inhalte.</p>
+    <h1>Kundenbereich</h1>
+
+    <p>Sie haben Zugriff auf das Kontaktformular.</p>
+
+
+
+   <form id="contactForm" action="https://formspree.io/f/mjkylegw" method="POST">
+
+  <label for="name">Name:</label><br>
+
+  <input type="text" id="name" name="name" required><br><br>
+
+
+
+  <label for="phone">Telefonnummer:</label><br>
+
+  <input type="text" id="phone" name="phone"><br><br>
+
+
+
+  <label for="email">E-Mail:</label><br>
+
+  <input type="email" id="email" name="email" required><br><br>
+
+
+
+  <label for="message">Nachricht:</label><br>
+
+  <textarea id="message" name="message" rows="6" required></textarea><br><br>
+
+
+
+  <button type="submit">Absenden</button>
+
+</form>
+
+
+
+<!-- Erfolgs- oder Fehlermeldung -->
+
+<p id="formMessage" style="display: none;"></p>
 
   </div>
+
+
+
+  <script>
+
+    // Formular-Absenden per E-Mail (funktioniert mit Formspree oder ähnlichen Diensten)
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+      e.preventDefault();
+
+
+
+      const data = {
+
+        name: document.getElementById("name").value,
+
+        phone: document.getElementById("phone").value,
+
+        email: document.getElementById("email").value,
+
+        message: document.getElementById("message").value
+
+      };
+
+
+
+      // Sende E-Mail (z. B. über Formspree)
+
+      fetch("https://formspree.io/f/moqgpjrz", {
+
+        method: "POST",
+
+        headers: {
+
+          "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify(data)
+
+     document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+  event.preventDefault();
+
+
+
+  const form = event.target;
+
+  const formData = new FormData(form);
+
+  const formMessage = document.getElementById("formMessage");
+
+
+
+  fetch(form.action, {
+
+    method: form.method,
+
+    body: formData,
+
+    headers: {
+
+      'Accept': 'application/json'
+
+    }
+
+  })
+
+  .then(response => {
+
+    if (response.ok) {
+
+      formMessage.innerText = "Nachricht erfolgreich gesendet!";
+
+      formMessage.style.color = "green";
+
+      formMessage.style.display = "block";
+
+      form.reset();
+
+    } else {
+
+      formMessage.innerText = "Fehler beim Senden. Bitte erneut versuchen.";
+
+      formMessage.style.color = "red";
+
+      formMessage.style.display = "block";
+
+    }
+
+  })
+
+  .catch(error => {
+
+    formMessage.innerText = "Fehler: Nachricht konnte nicht gesendet werden.";
+
+    formMessage.style.color = "red";
+
+    formMessage.style.display = "block";
+
+  });
+
+});
+  </script>
 
 </body>
 
