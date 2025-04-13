@@ -14,6 +14,14 @@ function login() {
   }
 }
 
+function logout() {
+  document.getElementById("fileList").style.display = "none";
+  document.getElementById("loginBox").style.display = "block";
+  document.getElementById("username").value = "";
+  document.getElementById("password").value = "";
+  document.getElementById("loginMessage").innerText = "";
+}
+
 function loadDocuments() {
   const files = [
     "RechnungVorlage_SeitenWelt.docx",
@@ -21,9 +29,10 @@ function loadDocuments() {
   ];
 
   const docList = document.getElementById("documents");
+  docList.innerHTML = "";
   files.forEach(file => {
     const link = document.createElement("a");
-    link.href = `dokumente/${file}`;
+    link.href = `dokumente/${encodeURIComponent(file)}`;
     link.innerText = file;
     link.download = file;
     docList.appendChild(link);
