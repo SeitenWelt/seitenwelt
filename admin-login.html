@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin Login – Seitenwelt</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="login-container">
-    <h2>Admin Login</h2>
-    <form onsubmit="return adminLogin(event)">
-      <input type="text" id="username" placeholder="Benutzername" required>
-      <input type="password" id="password" placeholder="Passwort" required>
-      <button type="submit">Login</button>
-      <p id="error-message" style="color: red;"></p>
-    </form>
-  </div>
-  <script src="admin.js"></script>
-</body>
-</html>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url("bilder/faksimile-hintergrund.jpg");
+      background-size: cover;
+      background-position: center;
+      font-family: 'Georgia', serif;
+      color: #fff;
+    }
+
+    .login-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      max-width: 200px;
+      margin-bottom: 30px;
+    }
+
+    .login-box {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #000;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .
