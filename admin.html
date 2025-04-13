@@ -2,45 +2,54 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>SeitenWelt Adminbereich</title>
+  <title>SeitenWelt Admin</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
-      background-color: #f9f9f9;
-      font-family: sans-serif;
+      background: url("faksimile-hintergrund.jpg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: Georgia, serif;
+      color: #1a237e;
       text-align: center;
       padding: 40px;
     }
-    .login-box, .file-list {
-      max-width: 400px;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .logo {
+      width: 180px;
+      margin-bottom: 20px;
     }
-    input {
+    .box {
+      max-width: 480px;
+      margin: auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+    input, button {
       width: 100%;
-      padding: 10px;
-      margin: 8px 0;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
     button {
-      padding: 10px 20px;
-      cursor: pointer;
       background-color: #1a237e;
       color: white;
-      border: none;
-      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
     }
     a {
       display: block;
-      margin: 10px 0;
+      margin: 8px 0;
+      color: #1a237e;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="login-box" id="loginBox">
+  <img src="logo.png" alt="SeitenWelt Logo" class="logo">
+
+  <div class="box" id="loginBox">
     <h2>Admin Login</h2>
     <input type="text" id="username" placeholder="Benutzername">
     <input type="password" id="password" placeholder="Passwort">
@@ -48,9 +57,10 @@
     <p id="loginMessage" style="color:red;"></p>
   </div>
 
-  <div class="file-list" id="fileList" style="display:none;">
+  <div class="box" id="fileList" style="display:none;">
     <h2>Verfügbare Dokumente</h2>
     <div id="documents"></div>
+    <button onclick="logout()">Logout</button>
   </div>
 
   <script src="admin.js"></script>
