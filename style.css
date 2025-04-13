@@ -1,7 +1,21 @@
 /* Allgemeines Styling */
 
 body {
+background-image: url('faksimile_bg.png');
 
+  background-size: cover;
+
+  background-attachment: fixed;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  font-family: 'Georgia', serif;
+
+  color: #1c1c1c;
+
+}
   margin: 0;
 
   font-family: 'Georgia', serif;
