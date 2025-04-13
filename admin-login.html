@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Login – Seitenwelt</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: url('bilder/faksimile-hintergrund.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: gold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: gold;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #loginMessage {
+      margin-top: 10px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Adminbereich</h2>
+    <input type="password" id="adminPassword" placeholder="Admin-Passwort eingeben" />
+    <button onclick="checkAdminPassword()">Login</button>
+    <p id="loginMessage"></p>
+  </div>
+
+  <script>
+    function checkAdminPassword() {
+      const password = document.getElementById("adminPassword").value;
+      if (password === "seitenwelt-admin") {
+        window.location.href = "admin-dashboard.html";
+      } else {
+        document.getElementById("loginMessage").innerText = "Falsches Passwort.";
+      }
+    }
+  </script>
+</body>
+</html>
