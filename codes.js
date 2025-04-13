@@ -1,38 +1,41 @@
-// Zugangscodes mit Erstellungsdatum
+const codes = [
 
-const accessCodes = [
+  { code: "ABC123", created: "2024-08-15" },
 
-  { code: "KUNDE123", createdAt: "2025-04-12" },
-
-  { code: "KUNDE456", createdAt: "2025-04-01" }
+  { code: "XYZ789", created: "2024-08-20" }
 
 ];
 
 
 
-// Funktion prüft, ob Code gültig ist (240 Tage ab Erstellungsdatum)
+function checkCode() {
 
-function isCodeValid(inputCode) {
-
-  const code = accessCodes.find(c => c.code === inputCode);
-
-  if (!code) return false;
-
-
-
-  const created = new Date(code.createdAt);
+  const input = document.getElementById("codeInput").value.trim();
 
   const today = new Date();
 
-  const diffDays = Math.floor((today - created) / (1000 * 60 * 60 * 24));
+  
 
-  return diffDays <= 240;
+  const validCode = codes.find(entry => {
+
+    const createdDate = new Date(entry.created);
+
+    const diffDays = (today - createdDate) / (1000 * 60 * 60 * 24);
+
+    return entry.code === input && diffDays <= 240;
+
+  });
+
+
+
+  if (validCode) {
+
+    window.location.href = "kundenbereich.html";
+
+  } else {
+
+    alert("Ungültiger oder abgelaufener Zugangscode.");
+
+  }
 
 }
-
-
-
-// Macht die Funktion im Browser global verfügbar
-
-window.isCodeValid = isCodeValid;
-
