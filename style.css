@@ -16,7 +16,11 @@ background-image: url('faksimile_bg.png');
   color: #1c1c1c;
 
 }
+margin: 0;
 
+  font-family: 'Georgia', serif;
+
+}
 
 
 /* LOGIN Seite */
