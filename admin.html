@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>SeitenWelt Adminbereich</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    .login-box, .file-list {
+      max-width: 400px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+    }
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #1a237e;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+    a {
+      display: block;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box" id="loginBox">
+    <h2>Admin Login</h2>
+    <input type="text" id="username" placeholder="Benutzername">
+    <input type="password" id="password" placeholder="Passwort">
+    <button onclick="login()">Login</button>
+    <p id="loginMessage" style="color:red;"></p>
+  </div>
+
+  <div class="file-list" id="fileList" style="display:none;">
+    <h2>Verfügbare Dokumente</h2>
+    <div id="documents"></div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
