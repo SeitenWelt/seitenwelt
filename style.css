@@ -1,55 +1,36 @@
-/* Allgemeines Styling */
+body.background {
 
-body {
-background-image: url('png/faksimile_bg.png');
+  background-image: url("faksimile_bg.png");
 
   background-size: cover;
-
-  background-attachment: fixed;
 
   background-position: center;
 
   background-repeat: no-repeat;
 
-  font-family: 'Georgia', serif;
+  color: #fff;
 
-  color: #1c1c1c;
+  font-family: Georgia, serif;
 
-}
-margin: 0;
+  margin: 0;
 
-  font-family: 'Georgia', serif;
-
-}
-
-
-/* LOGIN Seite */
-
-.login-page {
-
-  background-color: #f8f8f8;
-
-  text-align: center;
-
-  padding-top: 50px;
+  padding: 0;
 
 }
 
 
 
-.login-wrapper {
+.container {
 
-  background: white;
+  background-color: rgba(0, 0, 0, 0.6);
 
   padding: 30px;
 
-  max-width: 400px;
+  max-width: 600px;
 
-  margin: auto;
+  margin: 60px auto;
 
-  border-radius: 8px;
-
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
 
 }
 
@@ -57,36 +38,59 @@ margin: 0;
 
 .logo {
 
-  width: 150px;
+  width: 200px;
 
-  margin-bottom: 20px;
+  display: block;
 
-}
-
-
-
-/* KUNDENBEREICH Seite */
-
-.kundenbereich-page {
-
-  background-image: url('faksimile_bg.png');
-
-  background-size: cover;
-
-  background-position: center;
-
-  min-height: 100vh;
-
-  color: white;
-
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  margin: 0 auto 20px;
 
 }
 
 
 
-.kundenbereich-page .content {
+input, textarea, button {
 
-  padding: 40px;
+  width: 100%;
+
+  padding: 10px;
+
+  margin-bottom: 15px;
+
+  border: none;
+
+  border-radius: 5px;
 
 }
+
+
+
+input, textarea {
+
+  background-color: #fff;
+
+  color: #000;
+
+}
+
+
+
+button {
+
+  background-color: #cda45e;
+
+  color: #000;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+}
+
+
+
+button:hover {
+
+  background-color: #b38d4d;
+
+}
+
