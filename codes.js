@@ -1,8 +1,8 @@
 const codes = [
 
-  { code: "ABC123", created: "2024-08-15" },
+  { code: "ABC123", created: "2025-04-10" },
 
-  { code: "XYZ789", created: "2024-08-20" }
+  { code: "XYZ789", created: "2025-04-01" }
 
 ];
 
@@ -20,7 +20,7 @@ function checkCode() {
 
     const createdDate = new Date(entry.created);
 
-    const diffDays = (today - createdDate) / (1000 * 60 * 60 * 24);
+    const diffDays = Math.floor( (today - createdDate) / (1000 * 60 * 60 * 24));
 
     return entry.code === input && diffDays <= 240;
 
