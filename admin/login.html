@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Admin Login – Seitenwelt</title>
-  <link rel="stylesheet" href="admin.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login – SeitenWelt</title>
+  <link rel="stylesheet" href="admin.css" />
 </head>
 <body>
-  <div class="background"></div>
   <div class="login-container">
-    <img src="../logo.png" alt="Seitenwelt Logo" class="logo">
+    <img src="../logo.png" alt="SeitenWelt Logo" class="logo" />
     <h2>Admin Login</h2>
-    <input type="text" id="username" placeholder="Benutzername">
-    <input type="password" id="password" placeholder="Passwort">
-    <button onclick="login()">Login</button>
-    <p id="loginMessage"></p>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Benutzername" required />
+      <input type="password" id="password" placeholder="Passwort" required />
+      <button type="submit">Login</button>
+      <p id="error-message"></p>
+    </form>
   </div>
   <script src="admin-login.js"></script>
 </body>
