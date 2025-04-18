@@ -50,3 +50,42 @@ button:hover {
   color: red;
   margin-top: 10px;
 }
+.download-section {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  margin: 50px auto;
+  border-radius: 20px;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.download-section h2 {
+  font-size: 24px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+}
+
+.doc-list li {
+  margin: 15px 0;
+}
+
+.doc-list a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #1a237e;
+  background-color: #f0f0f0;
+  padding: 12px 20px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.doc-list a:hover {
+  background-color: #d1c4e9;
+}
