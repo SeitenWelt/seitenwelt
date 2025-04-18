@@ -1,33 +1,21 @@
-body, html {
+body {
   margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  height: 100%;
-  overflow: hidden;
-}
-
-.background {
-  background-image: url("../bilder/faksimile.jpg"); /* Hintergrundbild */
+  background: url('../faksimile_bg.png') no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .login-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.95);
   padding: 30px;
   border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   text-align: center;
   width: 300px;
-  box-shadow: 0 0 10px #000;
 }
 
 .logo {
@@ -36,28 +24,29 @@ body, html {
 }
 
 input {
-  width: 90%;
+  width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #888;
-  border-radius: 5px;
+  border-radius: 8px;
+  border: 1px solid #999;
 }
 
 button {
-  width: 95%;
+  width: 100%;
   padding: 10px;
-  background-color: #001F54;
+  background-color: #002d5b;
   color: gold;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: #003080;
+  background-color: #001f3f;
 }
 
-#loginMessage {
-  margin-top: 10px;
+#error-message {
   color: red;
+  margin-top: 10px;
 }
