@@ -1,6 +1,6 @@
 const codes = [
 
-  { code: "MAX123", created: "2025-04-10" },
+  { code: "WGGUZ84", created: "2025-04-10" },
 
   { code: "XYZ789", created: "2025-04-01" }
 
