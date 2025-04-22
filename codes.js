@@ -2,7 +2,9 @@ const codes = [
 
   { code: "WGGUZ84", created: "2025-04-10" },
 
-  { code: "XYZ789", created: "2025-04-01" }
+  { code: "XYZ789", created: "2025-04-01" },
+
+  { code: "Test123", created: "2025-04-23" }
 
 ];
 
